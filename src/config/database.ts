@@ -10,6 +10,6 @@ const database = require('knex')({
     },
   });
 function connect():void{
-    console.log(database ? "Database connected" : "Database not connected");
+    console.log(database ? " kết nối được dữ liệu" : "không kết nối được dữ liệu");
 }; 
 export default { connect,  database};

@@ -1,12 +1,10 @@
 import express, { Application } from "express";
 
 const app: Application = express();
-const PORT = 3000;
-
-// Hàm khởi động server
+const PORT = 8000;
 const startServer = (app: Application): void => {
   app.listen(PORT, () => {
-    console.log(`Server is running at http://localhost:${PORT}`);
+    console.log(`máy chủ  :  http://localhost:${PORT}`);
   });
 };
 
