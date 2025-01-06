@@ -4,6 +4,7 @@ import startServer from "./config/sever";
 import database from "./config/database";
 const app = express();
 require('express-group-routes');
+
 app.use(express.static('public'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));

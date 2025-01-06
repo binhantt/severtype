@@ -1,10 +1,11 @@
-import { Router, Request, Response } from "express";
+    import { Router, Request, Response } from "express";
 import Gioithieu from "../controller/Gioithieu";
 import hoctapController from "../controller/hoctap";
 import SanPhamcontroller from "../controller/SanPham";
 import login from "../Middleware/Login";
 import { group, groupWithMiddleware } from "../utils/routerGroup";  
 const adminRouter = Router();
+adminRouter.post("/", adminRouter);
 groupWithMiddleware(adminRouter , "/",login,(routers) => {
     group (routers, "/gioithieu", (router) => {
         router.get("/", Gioithieu.GET);

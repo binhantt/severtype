@@ -12,10 +12,11 @@ export const login = (req: Request, res: Response ,next : NextFunction) => {
     {
       id: 1,
       email: 'doan44503@gmail.com',
-      password: '$2a$10$yMyJ3yPm4zH6gb7OdbBlq.m0t6kN6zFsdbRfZyKrScHMRoVqCH6qe',
+      password: 'binhan11',
     }
   ];
-  const user = users.find(u => u.email === email );
+
+  const user = users.find(u => u.email === email && u.password === password);
   if (!user) {
     console.log("cảnh báo đã có người hack vào hệ thống");
     return res.status(400).json({ message: 'yêu cầu đăng nhập đúng' });
